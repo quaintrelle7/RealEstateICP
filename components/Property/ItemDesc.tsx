@@ -11,20 +11,21 @@ import {
     HStack,
 } from '@chakra-ui/react';
 import { BsArrowUpRight, BsHeartFill, BsHeart } from 'react-icons/bs';
+import BuyProperty from '../PopUp/BuyProperty';
 
 
 
 
 type ItemDescProps = {
 
-    name: String,
-    location: String,
-    description: String,
-    price: Number,
-    area: Number,
-    fractions: Number,
-    docURL: String,
-    imgURL: String,
+    name: string,
+    location: string,
+    description: string,
+    price: number,
+    area: number,
+    fractions: number,
+    docURL: string,
+    imgURL: string,
 
 };
 
@@ -71,8 +72,8 @@ const ItemDesc: React.FC<ItemDescProps> = (props) => {
                         {props.name}
                     </Heading>
 
-                    <Text fontWeight={600} fontSize={16}>Fractions Available: {parseInt(`${props.fractions}`)}</Text>
-                    <Text fontWeight={600} fontSize={16}> Price per Fraction :  {parseInt(`${props.price}`)}</Text>
+                    <Text fontWeight={600} fontSize={16}>Fractions Available : {parseInt(`${props.fractions}`)}</Text>
+                    <Text fontWeight={600} fontSize={16}> Price per Fraction     :  {parseInt(`${props.price}`)} ICP</Text>
                     <Text color={'gray.500'} noOfLines={3} fontSize={14}>
                         {props.description}
                     </Text>
@@ -96,6 +97,7 @@ const ItemDesc: React.FC<ItemDescProps> = (props) => {
                         </a>
                         <BsArrowUpRight />
                     </Flex>
+                    <BuyProperty price={props.price} />
                     <Flex
                         p={4}
                         alignItems="center"

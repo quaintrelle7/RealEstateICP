@@ -11,6 +11,7 @@ import { Card } from '@chakra-ui/react';
 import WithSpeechBubbles from './Testimonial';
 import Link from 'next/link';
 import PropertyItem from './PropertyItem';
+import FeatureContent from './FeatureContent';
 
 
 type HomePageProps = {
@@ -50,6 +51,7 @@ const HomePage: React.FC<HomePageProps> = () => {
             </Flex> */}
 
             <Box>
+                <FeatureContent/>
                 <Heading color={"brand.100"}>Featured Properties</Heading>
                 <Flex justifyContent={"space-between"}>
                     <PropertyItem />

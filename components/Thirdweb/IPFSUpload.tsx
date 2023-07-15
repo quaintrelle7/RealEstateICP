@@ -18,7 +18,7 @@ export default function Upload() {
         <div>
             <input type="file" onChange={(e) => setFile(e.target.files[0])} />
             <Button bg={"brand.300"} mt={4} onClick={uploadToIpfs}>Upload</Button>
-            
+
         </div>
     );
 }
