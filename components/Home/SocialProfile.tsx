@@ -30,7 +30,7 @@ interface RatingProps {
 
 function Rating({ rating, numReviews }: RatingProps) {
     return (
-        <Box d="flex" alignItems="center">
+        <Box alignItems="center">
             {Array(5)
                 .fill('')
                 .map((_, i) => {
