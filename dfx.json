@@ -1,0 +1,13 @@
+{
+    "canisters": {
+       "message_board": {
+        "type": "custom",
+        "build": "npx azle message_board",
+        "root": "pages",
+        "ts": "pages/_app.tsx",
+        "candid": "candid/index.did",
+        "wasm": ".azle/message_board/message_board.wasm.gz"
+      }
+    }
+  }
+  

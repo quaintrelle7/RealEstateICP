@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "azle": "0.16.2",
+    "uuid": "^9.0.0",
     "@chakra-ui/react": "^2.7.1",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
@@ -29,10 +31,14 @@
     "react-dom": "18.2.0",
     "react-horizontal-scrolling-menu": "^4.1.0",
     "react-icons": "^4.10.1",
-    "react-slick": "^0.29.0",
+  
     "typescript": "5.1.6"
   },
+  "engines": {
+    "node": "^12 || ^14 || ^16 || ^18"
+  },
+
   "devDependencies": {
-    "@types/react-slick": "^0.23.10"
+    "@types/uuid": "^9.0.1"
   }
 }
