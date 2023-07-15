@@ -83,7 +83,7 @@ function ProductAddToCart() {
                 />
 
                 <Box p="6">
-                    <Box d="flex" alignItems="baseline">
+                    <Box>
                         {data.isNew && (
                             <Badge rounded="full" px="2" fontSize="0.8em" colorScheme="red">
                                 New
@@ -112,7 +112,7 @@ function ProductAddToCart() {
                     </Flex>
 
                     <Flex justifyContent="flex-start" alignContent="center">
-                       <Button>Buy</Button>
+                        <Button>Buy</Button>
                         <Box fontSize="2xl" color={useColorModeValue('gray.800', 'white')}>
                             <Box as="span" color={'gray.600'} fontSize="lg">
                                 £
