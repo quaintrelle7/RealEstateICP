@@ -8,7 +8,6 @@ import {
     Container,
 } from '@chakra-ui/layout';
 import { Card } from '@chakra-ui/react';
-import CaptionCarousel from './CaptionCarousel';
 import WithSpeechBubbles from './Testimonial';
 import Link from 'next/link';
 import SocialProfile from './SocialProfile';
