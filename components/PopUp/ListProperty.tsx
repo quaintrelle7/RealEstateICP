@@ -17,6 +17,7 @@ const ListProperty: React.FC<ListPropertyProps> = () => {
     const [name, setName] = useState("");
     const [area, setArea] = useState("");
     const [price, setPrice] = useState("");
+    const [location, setLocation] = useState("");
     const [fraction, setFraction] = useState("");
     const [description, setDescription] = useState("");
 
@@ -51,9 +52,10 @@ const ListProperty: React.FC<ListPropertyProps> = () => {
     return (
         <>
             <Button
-              
-               
+
+                bg={"black"}
                 color={'white'}
+                fontSize={"15"}
                 rounded={'md'}
                 _hover={{
                     transform: 'translateY(-2px)',
@@ -94,6 +96,18 @@ const ListProperty: React.FC<ListPropertyProps> = () => {
                                     }}
                                     ref={initialRef} placeholder='Name of the Property' />
 
+                                <FormLabel fontWeight={800}>Location</FormLabel>
+                                <Input
+                                    mb={7}
+                                    type='text'
+                                    name='location'
+                                    value={location}
+                                    onChange={(e) => {
+                                        setLocation(e.target.value);
+                                    }}
+                                    placeholder='City, State, Country' />
+
+
                                 <FormLabel fontWeight={800}>Area</FormLabel>
                                 <Input
                                     name='area'
@@ -114,7 +128,7 @@ const ListProperty: React.FC<ListPropertyProps> = () => {
                                     onChange={(e) => {
                                         setFraction(e.target.value);
                                     }}
-                                     placeholder='No. of Fractions' />
+                                    placeholder='No. of Fractions' />
 
 
                                 <FormLabel fontWeight={800}>Description</FormLabel>
@@ -139,7 +153,7 @@ const ListProperty: React.FC<ListPropertyProps> = () => {
                                     placeholder='Price in ICP' />
                                 <FormLabel fontWeight={800}>Upload Property Documents</FormLabel>
 
-                                    <IPFSUpload/>
+                                <IPFSUpload />
 
                             </form>
 
