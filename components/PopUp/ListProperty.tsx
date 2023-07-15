@@ -1,5 +1,7 @@
 import { Box, Button, Flex, FormLabel, Heading, Modal, ModalBody, ModalCloseButton, ModalContent, useColorModeValue, ModalFooter, ModalOverlay, Stack, Text, Textarea, useDisclosure, Input } from '@chakra-ui/react';
 import React, { useState } from 'react';
+import IPFSUpload from '../Thirdweb/IPFSUpload';
+
 
 type ListPropertyProps = {
     //Wallet adddress of mentee
@@ -128,12 +130,16 @@ const ListProperty: React.FC<ListPropertyProps> = () => {
                                 <FormLabel fontWeight={800}>Price of the Property</FormLabel>
                                 <Input
                                     name='price'
+                                    mb={7}
                                     type='number'
                                     value={price}
                                     onChange={(e) => {
                                         setPrice(e.target.value);
                                     }}
                                     placeholder='Price in ICP' />
+                                <FormLabel fontWeight={800}>Upload Property Documents</FormLabel>
+
+                                    <IPFSUpload/>
 
                             </form>
 
